@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_floors",
+  "info": {
+    "singularName": "test-floor",
+    "pluralName": "test-floors",
+    "displayName": "TestFloor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Floors": {
+      "type": "enumeration",
+      "enum": [
+        "Floor1",
+        "Floor2",
+        "Floor3",
+        "Floor4",
+        "Floor5"
+      ],
+      "required": true
+    },
+    "tests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test.test",
+      "mappedBy": "test_floor"
+    },
+    "ImageFloors": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

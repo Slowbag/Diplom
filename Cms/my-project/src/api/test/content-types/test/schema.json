@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "Test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "position_point_x": {
+      "type": "float",
+      "required": true,
+      "default": 0
+    },
+    "position_point_y": {
+      "type": "float",
+      "required": true,
+      "default": 0
+    },
+    "test_floor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test-floor.test-floor",
+      "inversedBy": "tests"
+    },
+    "ImageCab": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
