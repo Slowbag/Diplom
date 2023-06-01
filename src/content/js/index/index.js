@@ -1,4 +1,4 @@
-let baseUrl = 'http://localhost:1337';
+let baseUrl = 'https://6fb8-5-165-156-247.ngrok-free.app';
 
 let dataFloors;
 
