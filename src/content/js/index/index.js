@@ -53,7 +53,7 @@ $(function()
 
                 $("#pills-"+id).append(`
                     <a style="position:absolute;z-index: 2; top:${pointY}px; left:${pointX}px;cursor: pointer;" val="${idRooms}" onclick="renderMain(this)" alt="${nameRoom}">
-                        <img src="content/image/geo-alt-fill.svg" alt="Bootstrap" width="32" height="32">
+                        <img src="src/content/image/geo-alt-fill.svg" alt="Bootstrap" width="32" height="32">
                     </a>
                 `);
             }
