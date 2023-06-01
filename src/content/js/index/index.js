@@ -1,4 +1,5 @@
-let baseUrl = 'http://localhost:1337';
+let baseUrl = 'https://slowbag.github.io/Diplom/';
+let recvestUrl = 'http://localhost:1337';
 
 let dataFloors;
 
@@ -8,7 +9,7 @@ $(function()
 {
     // ModelFloors
     $.ajax({
-        url: baseUrl + '/api/floors?populate=*',
+        url: recvestUrl + '/api/floors?populate=*',
         method: 'get',
         dataType: 'json',
         success: function(data)
@@ -31,7 +32,7 @@ $(function()
 
             let activeTab = (x == 0) ? 'nav-link active':'nav-link';
             let activeTabPane = (x == 0) ? 'tab-pane fade show active':'tab-pane fade';
-            let imageUrl = baseUrl + map.formats.medium.url;
+            let imageUrl = recvestUrl + map.formats.medium.url;
 
             $('#pills-tab').append(`
                 <li class="nav-item" role="presentation">
@@ -53,7 +54,7 @@ $(function()
 
                 $("#pills-"+id).append(`
                     <a style="position:absolute;z-index: 2; top:${pointY}px; left:${pointX}px;cursor: pointer;" val="${idRooms}" onclick="renderMain(this)" alt="${nameRoom}">
-                        <img src="src/content/image/geo-alt-fill.svg" alt="Bootstrap" width="32" height="32">
+                        <img src="${baseUrl}src/content/image/geo-alt-fill.svg" alt="Bootstrap" width="32" height="32">
                     </a>
                 `);
             }
