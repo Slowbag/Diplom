@@ -1,5 +1,5 @@
 let baseUrl = 'https://slowbag.github.io/Diplom/';
-let recvestUrl = 'http://localhost:1337';
+let recvestUrl = 'https://3e56-5-165-156-247.ngrok-free.app';
 
 let dataFloors;
 
